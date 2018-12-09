@@ -33,3 +33,23 @@ echo deb-src http://nginx.org/packages/debian/ wheezy nginx >> /etc/apt/sources.
 wget http://nginx.org/keys/nginx_signing.key && apt-key add nginx_signing.key && apt-get update && apt-get install nginx
 
 现在，终于安装使用上最新的Nginx了。
+
+centos7安装最新nginx
+-----
+下载对应当前系统版本的nginx包(package)
+
+wget  http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+
+建立nginx的yum仓库
+
+rpm -ivh nginx-release-centos-7-0.el7.ngx.noarch.rpm
+
+下载并安装nginx
+
+yum install nginx
+
+启动nginx服务
+
+systemctl start nginx
+
+配置:默认的配置文件在 /etc/nginx 路径下，使用该配置已经可以正确地运行nginx；如需要自定义，修改其下的 nginx.conf 等文件即可。
