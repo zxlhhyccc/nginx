@@ -53,3 +53,5 @@ yum install nginx
 systemctl start nginx
 
 配置:默认的配置文件在 /etc/nginx 路径下，使用该配置已经可以正确地运行nginx；如需要自定义，修改其下的 nginx.conf 等文件即可。
+
+nginx的另外配置：https://www.srgb.xyz/2018/09/02/nginx_rewrite/
