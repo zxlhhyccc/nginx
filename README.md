@@ -55,3 +55,16 @@ systemctl start nginx
 配置:默认的配置文件在 /etc/nginx 路径下，使用该配置已经可以正确地运行nginx；如需要自定义，修改其下的 nginx.conf 等文件即可。
 
 nginx的另外配置：https://www.srgb.xyz/2018/09/02/nginx_rewrite/
+
+nginx Failed to read PID from file /run/nginx.pid: Invalid argument 解决方法：
+`````
+mkdir -p /etc/systemd/system/nginx.service.d 
+```````
+printf "[Service]\nExecStartPost=/bin/sleep 0.1\n" > /etc/systemd/system/nginx.service.d/override.conf 
+````````
+然后 
+``````
+systemctl daemon-reload 
+````````
+systemctl restart nginx.service
+``````````
