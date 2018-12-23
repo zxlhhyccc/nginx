@@ -59,12 +59,10 @@ nginx的另外配置：https://www.srgb.xyz/2018/09/02/nginx_rewrite/
 nginx Failed to read PID from file /run/nginx.pid: Invalid argument 解决方法：
 `````
 mkdir -p /etc/systemd/system/nginx.service.d 
-```````
 printf "[Service]\nExecStartPost=/bin/sleep 0.1\n" > /etc/systemd/system/nginx.service.d/override.conf 
 ````````
 然后 
 ``````
 systemctl daemon-reload 
-````````
 systemctl restart nginx.service
 ``````````
