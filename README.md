@@ -66,3 +66,6 @@ printf "[Service]\nExecStartPost=/bin/sleep 0.1\n" > /etc/systemd/system/nginx.s
 systemctl daemon-reload 
 systemctl restart nginx.service
 ``````````
+
+nginx1.12.2版本的安装方法：rpm -i https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+ yum -y install nginx
