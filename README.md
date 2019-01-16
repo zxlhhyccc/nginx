@@ -92,6 +92,8 @@ http://dl.fedoraproject.org/pub/epel/7/x86_64/
 `````
 # yum install nginx
 ``````
+或者进入目录下载需要的版本（见安装1.8.1的安装说明）
+
 安装1.4.2版本：
 ``````
 rpm -ivh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
@@ -100,3 +102,7 @@ rpm -ivh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0
 ``````
 rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
 ```````
+然后进入下载目录选择需要的版本安装，如：安装1.8.1版本：
+`````
+yum install -y http://nginx.org/packages/centos/7/x86_64/RPMS/nginx-1.8.1-1.el7.ngx.x86_64.rpm
+````````
