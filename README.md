@@ -68,19 +68,35 @@ systemctl restart nginx.service
 ``````````
 
 nginx1.12.2版本的安装方法：
-
-rpm -i https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-
+``````
+rpm --import https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7
+rpm -ivh  https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+```````
+或者
+```````
+rpm -Uvh  https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+`````````
+安装nginx
+`````
 yum -y install nginx
-
+````````
 从中下载最新的epel-release rpm
-
+```````
 http://dl.fedoraproject.org/pub/epel/7/x86_64/
-
+`````````
 安装epel-release rpm：
-
+`````
 # rpm -Uvh epel-release*rpm
-
+`````
 安装nginx rpm包：
-
+`````
 # yum install nginx
+``````
+安装1.4.2版本：
+``````
+rpm -ivh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+```````
+或者
+``````
+rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+```````
